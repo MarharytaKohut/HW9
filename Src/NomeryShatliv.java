@@ -1,10 +1,17 @@
 public class NomeryShatliv {
     public static void main(String[] args) {
-        for (int i = 0; i < 101; i++) {
-            if ( i != 4 & i != 9) {
-                System.out.println(i);
+        int shuttleNum = 1;
+        for (int i = 0; i < 100; i++) {
+            if (shuttleNum % 10 == 4 || shuttleNum % 10 == 9) {
+                shuttleNum++;
             }
-                }
+            if (shuttleNum / 10 % 10 == 4 || shuttleNum / 10 % 10 == 9) {
+                shuttleNum += 10;
+            }
+            System.out.print(shuttleNum + " ");
+            shuttleNum++;
+        }
+
 
             }
         }
